@@ -1,43 +1,63 @@
 {
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
-  "breadcrumbs.enabled": false,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "docthis.includeDescriptionTag": true,
+  "gopls": {
+    "formatting.gofumpt": true,
+    "ui.semanticTokens": true
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true
+  },
+  "editor.accessibilitySupport": "off",
   "editor.codeActionsOnSave": {
-    "source.addMissingImports": true,
-    "source.organizeImports": true
+    "source.addMissingImports": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "autoDocstring.docstringFormat": "numpy",
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    }
   },
   "editor.cursorSmoothCaretAnimation": "on",
-  "editor.cursorStyle": "block-outline",
+  "editor.cursorStyle": "block",
   "editor.cursorSurroundingLines": 5,
-  "editor.fontFamily": "MonoLisa",
-  "editor.fontLigatures": "'ss02' on",
+  // "editor.fontFamily": "MonoLisa",
+  "editor.fontFamily": "'Monaspace Neon', monospace",
+  // "editor.fontLigatures": "'ss02' on",
+  // "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",
+  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'cv01' 3, 'cv31' 1",
   "editor.fontSize": 15,
   "editor.fontVariations": true,
-  "editor.fontWeight": 400,
-  "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "file",
+  "editor.fontWeight": "bold",
   "editor.formatOnType": true,
   "editor.glyphMargin": false,
   "editor.hideCursorInOverviewRuler": true,
   "editor.inlineSuggest.enabled": true,
-  "editor.insertSpaces": false,
-  "editor.lineNumbers": "relative",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.overviewRulerBorder": false,
@@ -46,15 +66,20 @@
   "editor.renderWhitespace": "none",
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
-  "editor.showFoldingControls": "never",
   "editor.smoothScrolling": true,
   "editor.stablePeek": true,
   "editor.stickyScroll.enabled": true,
   "editor.suggest.insertMode": "replace",
   "editor.suggestSelection": "recentlyUsedByPrefix",
-  "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
+      {
+        "scope": "entity.name.type",
+        "settings": {
+          // "foreground": "#00aaffe8",
+          "fontStyle": "underline"
+        }
+      },
       {
         "scope": "comment",
         "settings": {
@@ -76,22 +101,21 @@
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": false,
   "files.associations": {
-    "*.jsx": "javascriptreact"
+    "*.jsx": "javascriptreact",
+    "*.js": "javascriptreact",
+    "*.patch": "diff"
   },
   "files.exclude": {
     "**/.classpath": true,
     "**/.factorypath": true,
     "**/.project": true,
-    "**/.settings": true,
-    "**/node_modules": true
+    "**/.settings": true
   },
   "git.autofetch": true,
   "javascript.format.semicolons": "insert",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "js/ts.implicitProjectConfig.strictNullChecks": true,
   "liveServer.settings.donotVerifyTags": true,
-  "prettier.useEditorConfig": true,
-  "prettier.withNodeModules": true,
   "projectManager.git.baseFolders": [
     "$home/workspace"
   ],
@@ -135,11 +159,90 @@
   "typescript.tsdk": "./node_modules/typescript/lib",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.title": " ",
-  "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Sequoia Moonlight",
-  "workbench.iconTheme": "rose-pine-icons",
   "workbench.layoutControl.enabled": false,
   "workbench.layoutControl.type": "menu",
+  "workbench.tree.renderIndentGuides": "none",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.editor.showTabs": "single",
+  "prettier.printWidth": 82,
+  "workbench.startupEditor": "none",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "window.titleBarStyle": "custom",
+  "cSpell.userWords": [
+    "Cometly",
+    "DDLE",
+    "Fastify",
+    "idempotency",
+    "nanonet",
+    "Nanonets",
+    "notif",
+    "notifs",
+    "Pressable",
+    "SENDGRID",
+    "uncollectible",
+    "xero",
+    "zustand"
+  ],
+  "editor.inlayHints.enabled": "on",
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "window.commandCenter": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Sequoia Monochrome",
+  // "prettier.prettierPath": "./node_modules/prettier",
+  "prettier.requireConfig": true,
+  "prettier.trailingComma": "all",
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.cursorBlinking": "smooth",
+  "diffEditor.codeLens": true,
+  "editor.formatOnSave": true,
+  "firestorerules.usePrettierFormatter": true,
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 4,
+  "workbench.activityBar.location": "top",
+  "supermaven.enable": {
+    "sml": false,
+    "*": true,
+    "csv": false
+  },
+  "yaml.customTags": [
+    "!Base64 scalar",
+    "!Cidr scalar",
+    "!And sequence",
+    "!Equals sequence",
+    "!If sequence",
+    "!Not sequence",
+    "!Or sequence",
+    "!Condition scalar",
+    "!FindInMap sequence",
+    "!GetAtt scalar",
+    "!GetAtt sequence",
+    "!GetAZs scalar",
+    "!ImportValue scalar",
+    "!Join sequence",
+    "!Select sequence",
+    "!Split sequence",
+    "!Sub scalar",
+    "!Transform mapping",
+    "!Ref scalar",
+  ],
+  "supermaven.allowGitignore": true,
+  "workbench.panel.defaultLocation": "left",
   "workbench.statusBar.visible": false,
-  "workbench.tree.renderIndentGuides": "none"
+  "workbench.colorCustomizations": {
+    "[Sequoia Monochrome]": {
+      "editor.background": "#000000", // Default is likely darker (e.g., #121212)
+      "editor.foreground": "#cccccc", // Slightly brighter than the default
+      "editorLineNumber.foreground": "#777777",
+      "editorCursor.foreground": "#ffffff",
+      "editor.selectionBackground": "#333333",
+      "editor.lineHighlightBackground": "#2a2a2a"
+    }
+  }
 }
